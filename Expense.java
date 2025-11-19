@@ -17,7 +17,7 @@ public class Expense {
         this.note = note;
     }
 
-    // Setters (No changes needed, they are correct)
+    // Setters
     public void setAmount(double amount) {
         if (amount < 0) {
             throw new IllegalArgumentException("❌ Amount must be greater than zero!");
