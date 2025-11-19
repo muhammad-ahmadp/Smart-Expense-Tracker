@@ -21,7 +21,6 @@ public class ExpenseManager {
         System.out.println("----------------------------------");
     }
 
-    // FIX: Filter logic now iterates through all expenses, prints matches, and calculates the category total.
     public void filterExpenses(String category){
         ArrayList<Expense> filtered = new ArrayList<>();
         double categoryTotal = 0.0;
