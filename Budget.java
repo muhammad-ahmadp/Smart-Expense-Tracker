@@ -11,7 +11,7 @@ public class Budget {
 
     public void setMonthlyBudget(double monthlyBudget) {
         if (monthlyBudget < 0) {
-            throw new IllegalArgumentException("❌ Monthly budget cannot be negative!");
+            throw new IllegalArgumentException("Monthly budget cannot be negative!");
         }
         this.monthlyBudget = monthlyBudget;
     }
