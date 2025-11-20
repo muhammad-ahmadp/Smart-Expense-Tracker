@@ -27,7 +27,7 @@ public class Manager {
                 choice = sc.nextInt();
                 sc.nextLine(); // Consume newline
             } else {
-                System.out.println("❌ Invalid choice! Enter a number from 1 to 7.");
+                System.out.println("Invalid choice! Enter a number from 1 to 7.");
                 sc.nextLine(); // Consume invalid input
                 continue;
             }
@@ -42,7 +42,7 @@ public class Manager {
                         amount = sc.nextDouble();
                         sc.nextLine();
                     } catch (InputMismatchException e) {
-                        System.out.println("❌ Invalid amount format. Please enter a number.");
+                        System.out.println("Invalid amount format. Please enter a number.");
                         sc.nextLine();
                         break;
                     }
@@ -56,7 +56,7 @@ public class Manager {
                     try {
                         date = LocalDate.parse(newDate);
                     } catch (DateTimeParseException ex) {
-                        System.out.println("❌ Invalid date format. Use YYYY-MM-DD.");
+                        System.out.println("Invalid date format. Use YYYY-MM-DD.");
                         break;
                     }
 
@@ -66,7 +66,7 @@ public class Manager {
                     try {
                         Expense expense = new Expense(amount, category, date, note);
                         expenseManager.addExpense(expense);
-                        System.out.println("✅ Expense added successfully!");
+                        System.out.println("Expense added successfully!");
                     } catch (IllegalArgumentException e) {
                         System.out.println(e.getMessage());
                     }
@@ -91,9 +91,9 @@ public class Manager {
 
                         Budget budget1 = new Budget(budgetAmount);
                         expenseManager.setBudget(budget1);
-                        System.out.println("✅ Monthly budget set successfully!");
+                        System.out.println("Monthly budget set successfully!");
                     } catch (InputMismatchException e) {
-                        System.out.println("❌ Invalid budget format. Please enter a number.");
+                        System.out.println("Invalid budget format. Please enter a number.");
                         sc.nextLine();
                     } catch (IllegalArgumentException e) {
                         System.out.println(e.getMessage());
@@ -107,7 +107,7 @@ public class Manager {
                     System.out.println("Saving data... (Note: Data is only stored in memory)");
                     System.out.println("Exiting system...");
                 }
-                default -> System.out.println("❌ Invalid choice! Enter 1-7.");
+                default -> System.out.println("Invalid choice! Enter 1-7.");
             }
         }
         sc.close();
