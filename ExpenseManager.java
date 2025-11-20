@@ -10,7 +10,7 @@ public class ExpenseManager {
 
     public void viewAllExpenses() {
         if (expenses.isEmpty()) {
-            System.out.println("❌ No expenses found!");
+            System.out.println("No expenses found!");
             return;
         }
 
@@ -34,7 +34,7 @@ public class ExpenseManager {
         }
 
         if (filtered.isEmpty()) {
-            System.out.println("❌ No expenses found for category: " + category);
+            System.out.println("No expenses found for category: " + category);
             return;
         }
 
@@ -70,7 +70,7 @@ public class ExpenseManager {
 
     public void viewBudget (){
         if (budget == null) {
-            System.out.println("❌ Monthly budget has not been set yet.");
+            System.out.println("Monthly budget has not been set yet.");
             return;
         }
 
@@ -83,9 +83,9 @@ public class ExpenseManager {
         System.out.println(String.format("Total Spending: %.2f PKR", total));
 
         if (total > monthlyBudget){
-            System.out.println(String.format("Status: ❌ Budget Exceeded by %.2f PKR!", Math.abs(remainingOrOver)));
+            System.out.println(String.format("Status: Budget Exceeded by %.2f PKR!", Math.abs(remainingOrOver)));
         } else {
-            System.out.println(String.format("Status: ✅ You are within the budget. Remaining: %.2f PKR", remainingOrOver));
+            System.out.println(String.format("Status: You are within the budget. Remaining: %.2f PKR", remainingOrOver));
         }
     }
 }
